@@ -8,7 +8,7 @@
 ## JSON
 
 - definición: celacciones de claves y valores
-- definimos los datos con {}
+- definimos los datos con {}, importantes las comas
 - ejemplo: 
 {
     "usuarios": [

@@ -10,6 +10,7 @@
 - definición: celacciones de claves y valores
 - definimos los datos con {}, importantes las comas
 - ejemplo: 
+```json
 {
     "usuarios": [
         {
@@ -19,3 +20,4 @@
         }
     ]
 }
+```

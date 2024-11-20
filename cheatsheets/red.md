@@ -3,7 +3,7 @@
 - URL 
 - VERBO
 
-# Verbos
+# Verbos HTTP
 
 - Get: Consumir recursos
 - Post: Mandar datos
@@ -24,3 +24,11 @@ La API se llama desde los dos:
 - WEB: html, js, css
 - APP: Java, python...
 El usuario puede comunicarse con la API mediante la GUI.
+
+# PETICION
+
+En js es "fetch"
+Tenemos la URL, verbo HTTP y datos
+En los datos:
+- Headers (metadatos para interpretacion del servidor)
+- Body (informacion más compleja, JSON, formularios, iamgenes...)

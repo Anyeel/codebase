@@ -12,3 +12,10 @@ contraseña_usuario = primer_usuario.get("password")
 print(nombre_usuario)
 print(contraseña_usuario)
 
+data = {
+    "username": nombre_usuario,
+    "password": contraseña_usuario
+}
+url = 'https://dummyjson.com/user/login'
+response = requests.post(url, data=data)
+print(response.json())

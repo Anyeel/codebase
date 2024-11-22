@@ -34,8 +34,7 @@ Van dentro de javascript
     }
 </script>
 ```
+## IDs
 
-## Tarea
-
-El usuario ingresó:
-y hacerlo con todos los inputs
+- Para seleccionar el id usamos "#"
+- Ejemplo: document.querySelector("#ejemplo")

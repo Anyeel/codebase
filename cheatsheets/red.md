@@ -25,12 +25,15 @@ La API se llama desde los dos:
 - APP: Java, python...
 El usuario puede comunicarse con la API mediante la GUI.
 
-# PETICION
+# PETICION HTTP
 
 En js es "fetch"
-Tenemos la URL, verbo HTTP y datos
-En los datos:
-- Headers (metadatos para interpretacion del servidor)
-- Body (informacion más compleja, JSON, formularios, iamgenes...)
+- URL ROOT -> api.jsonbin.io/v3
+- ENDPOINT/RUTA -> /b//<ID>
+- VERBO HTTP
+- DATOS:
+    - Headers (metadatos para interpretacion del servidor) -> X-MASTER-KEY & X-ACCESS-KEY
+    - Body (informacion más compleja, JSON, formularios, iamgenes...)
+
 
 DEBERES -> Authenticated user.

@@ -16,7 +16,7 @@ headers = {
     "X-Access-Key": XAccessKey
 }
 usuario = {
-    "user": "admin",
+    "username": "admin",
     "password" : "1234"
     }
 def read_db():
@@ -31,6 +31,10 @@ def add_user():
     r = requests.patch(url_root + route, headers=headers, json=usuario)
     print(r.json())
 
+def create_db():
+    r = requests.post(url_root + route, headers=headers, json=usuario)
+    print(r.json())
+
 read_db()
-add_user()
+create_db()
 read_db()

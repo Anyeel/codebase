@@ -13,8 +13,8 @@ def query(payload):
 	response = requests.post(API_URL, headers=headers, json=payload)
 	return response.content
 image_bytes = query({
-	"inputs": "berserk",
+	"inputs": "",
 })
 
 image = Image.open(io.BytesIO(image_bytes))
-image.save("berserk.png")
+image.save("ERASEUNAVEZ.png")

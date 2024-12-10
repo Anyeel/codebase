@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ventanas ASCII</title>
+    <style>
+        *{ 
+            background: red;
+        }
+        #marcadorPuntos{
+            background: black;
+            color: white;
+        }
+        button{
+            background: wheat;
+        }
+    </style>
+    <!--
     <script src="asciibox.js" defer></script>
+    -->
 </head>
 <body> 
-    
+    <p>Puntos</p>
+    <p id="marcadorPuntos">0</p>
+    <button id = "botonSumar">Click</button>
+
+    <script>
+        let puntos = 0
+        const marcadorPuntos = document.getElementById("marcadorPuntos")
+        marcadorPuntos.innerText = puntos
+        const boton = document.querySelector("#botonSumar")
+        boton.addEventListener("click", sumarPuntos)
+        function sumarPuntos() {
+            puntos++
+            marcadorPuntos.innerText = puntos
+        }
+        </script>
 </body>
 </html>

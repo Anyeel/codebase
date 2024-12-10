@@ -206,3 +206,6 @@ Examen Tema 1, 2 y 3
 ## Gestión de sistemas archivos mediante comandos
 
 - Podemos usar la terminal para gestionar los datos, como ya hemos hecho, con los comandos como mkdir, cd...
+
+## Gestión de enlaces
+

@@ -6,7 +6,7 @@
     <title>Ventanas ASCII</title>
     <style>
         *{ 
-            background: red;
+            background: white;
         }
         #marcadorPuntos{
             background: black;
@@ -17,24 +17,27 @@
         }
     </style>
     <!--
-    <script src="asciibox.js" defer></script>
+    <script src="asciibox.js" defer></script> METER COLORES GRADUALES SEGUN VALOR
     -->
 </head>
 <body> 
     <p>Puntos</p>
     <p id="marcadorPuntos">0</p>
     <button id = "botonSumar">Click</button>
-
     <script>
-        let puntos = 0
-        const marcadorPuntos = document.getElementById("marcadorPuntos")
-        marcadorPuntos.innerText = puntos
         const boton = document.querySelector("#botonSumar")
-        boton.addEventListener("click", sumarPuntos)
+        const marcadorPuntos = document.getElementById("marcadorPuntos")
+        let puntos = localStorage.getItem('puntos')
+        if (!puntos){
+            puntos = 0
+        }
+        marcadorPuntos.innerText = puntos
         function sumarPuntos() {
             puntos++
+            localStorage.setItem('puntos', puntos)
             marcadorPuntos.innerText = puntos
         }
-        </script>
+        boton.addEventListener("click", sumarPuntos)
+    </script>
 </body>
 </html>

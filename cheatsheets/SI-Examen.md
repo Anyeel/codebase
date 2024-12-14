@@ -209,3 +209,63 @@ Examen Tema 1, 2 y 3
 
 ## Gestión de enlaces
 
+- Los navegadores nos proporcionan la posibilidad de guardar un enlace a una página web. Por ejemplo en google chrome podemos guardarlo en la pestaña de la estrella (favoritos). Son conocidos como los marcadores.
+
+- No guardamos la página como tal, unicamente un enlace a la misma. 
+
+- Similar a la manera de guardar los archivos en nuestro ordenador, un acceso directo es un "enlace" a un archivo que está en otro lugar.
+
+## Estructura de directorios.
+
+- Tienen forma de árbol.
+
+- En Linux los elementos clave del árbol son:
+    - bin
+    - boot
+    - home
+    - tmp
+    - lib
+- En Windows, se crea también su propia estructura de árbol:
+    - Windows
+    - Archivos de programa
+    - Documents
+
+## Busqueda de archivos.
+
+- DOS y Windows:
+    - *: sustituye cadenas de caracteres.
+    - ?: sustituye un caracter.
+- Linux: 
+    - podemos usar el comando "find"
+
+## Identificacion del software instalado.
+
+- En windows podemos usar el panel de control y entrar en programas para ver que programas tenemos instalados. También podemos usar el simbolo del sistema y utilizar el comando "dir".
+
+- En linux podemos consultarlo con las herramientas graficas del sistema o con el comando dpkg.
+
+## Gestión de la informacion del sistema. Rendimiento.
+
+- Evalución de la experiencia en Windows. Monitor de rendimiento.
+
+## Montaje y desmontaje de dispositivos.
+
+- Técnica de administración de discos que se utiliza en Linux. Resulta útil cuando queremos compartir particiones de discos con muchos usuarios.
+
+- Para el montaje y desmontaje de una unidad debemos hacerlo desde el panel de control.
+
+## Automatización
+
+- Se puede automatizar la mayoria de tareas que pueden resultar tediosas, las más frecuentes son:
+    - Copias de seguridad
+    - Antivirus
+
+- De esta forma, en el administrador de equipos, podemos entrar en el programador de tareas, en el que podemos "crear tarea". Mediante lineas de comandos escritas en un documento de texto, escribiremos las funciones que queremos automatizar, todo esto ira guardado en un archivo .bat . Una vez hecho esto mediante el programador de tareas podemos programar la ejecución de este archivo.
+
+## Herramienta de gestión de discos. Particiones y volumenes.
+
+- Desde el administrador de discos en Windows podemos realizar todas estas acciones. 
+
+- En Linux tenemos herramientas como Gparted o partitionmanager.
+
+- Desfragmentación de discos y como funcionan los discos internamente.

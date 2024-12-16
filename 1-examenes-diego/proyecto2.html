@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2</title>
+</head>
+<body>
+    <p id="marcador1"></p>
+    <input type="range" min="0" max="100" id="input1">
+    <p id="marcador2"></p>
+    <input type="range" min="0" max="100" id="input2">    
+    <script>
+        const p1 = document.querySelector("#marcador1")
+        const p2 = document.querySelector("#marcador2")
+        const input1 = document.querySelector("#input1")
+        const input2 = document.querySelector("#input2")
+
+        function actualizarMarcador(){
+            p1.innerText = input1.value
+            p2.innerText = input2.value
+        }
+        input1.addEventListener("input", actualizarMarcador)
+        input2.addEventListener("input", actualizarMarcador)
+    </script>
+</body>
+</html>

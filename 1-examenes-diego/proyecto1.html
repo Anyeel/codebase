@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P1</title>
+</head>
+<body>
+    <p>Puntos</p>
+    <p id="marcadorPuntos">0</p>
+    <button id="botonSumar">+</button>
+    <button id="botonRestar">-</button>
+    <script>
+        const botonmas = document.querySelector("#botonSumar")
+        const botonmenos = document.querySelector("#botonRestar")
+        const marcadorPuntos = document.getElementById("marcadorPuntos")
+        let puntos = localStorage.getItem('puntos')
+        
+        function actualizarColor(){
+            if (puntos < 5){
+                marcadorPuntos.style.color = 'green';
+            }
+            else if (puntos > 7){
+                marcadorPuntos.style.color = 'red';
+            }
+            else {
+                marcadorPuntos.style.color = 'yellow';
+            }
+            marcadorPuntos.innerText = puntos
+        }
+        if (!puntos){
+            puntos = 0
+        }
+        marcadorPuntos.innerText = puntos
+        function sumarPuntos() {
+            if (puntos <= 9)
+            {
+                puntos++
+                localStorage.setItem('puntos', puntos)
+                marcadorPuntos.innerText = puntos
+                actualizarColor()
+            }
+        }
+        function restarPuntos() {
+            if (puntos >= 1)
+            {
+                puntos--
+                localStorage.setItem('puntos', puntos)
+                marcadorPuntos.innerText = puntos
+                actualizarColor()
+            }
+        }
+        botonmas.addEventListener("click", sumarPuntos)
+        botonmenos.addEventListener("click", restarPuntos)
+    </script>
+</body>
+</html>

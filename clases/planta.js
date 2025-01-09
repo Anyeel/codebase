@@ -4,9 +4,18 @@ class Particle {
         this.y = height - 100
     }
     show() {
-        stroke(0, random(100, 255), 0)
-        strokeWeight(2)
-        point(this.x, this.y)
+        let probabilidadFlor = random(1)
+        if (probabilidadFlor < 0.05){
+            stroke (255, 0, 0)
+            strokeWeight(2)
+            ellipse(this.x, this.y, 1, 1)
+        }
+        else{
+            stroke(0, random(100, 255), 0)
+            strokeWeight(2)
+            point(this.x, this.y)
+        }
+        
     }
     up() {
         this.y--

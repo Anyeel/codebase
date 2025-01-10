@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/addons/p5.sound.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta charset="utf-8" />
+    </head>
+    <style>
+        td{
+            border: 1px solid black
+        }
+    </style>
+    <body>
+        <table>
+            <tr>
+                <td>x</td>
+                <td>y</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+        </table>
+
+        <script>
+            let numeroAleatorio
+
+            function draw(){
+                const tr = document.createElement("tr")
+                const td1 = document.createElement("td")
+                numeroAleatorio = random(100)
+                td1.innerText = numeroAleatorio
+                tr.appendChild(td1)
+                const td2 = document.createElement("td")
+                numeroAleatorio = random(100)
+                td2.innerText = numeroAleatorio
+                tr.appendChild(td2)
+                const table = document.querySelector("table")
+                table.appendChild(tr)
+            }
+        </script>
+    </body>
+</html>

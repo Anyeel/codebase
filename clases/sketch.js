@@ -9,7 +9,7 @@ function preload() {
 }
 function setup() {
     createCanvas(width, length)
-    particle = new Particle(width/2 + 10, length/2 , 2, 2)
+    particle = new Particle(width/2, length/2 , random(-3, 3), random(-3, 3))
 }
   
 function draw() {

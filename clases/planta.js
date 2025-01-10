@@ -1,6 +1,6 @@
 class Particle {
     constructor() {
-        this.x = width / 2
+        this.x = random(160, 240)
         this.y = height - 100
     }
     show() {

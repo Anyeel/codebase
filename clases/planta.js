@@ -2,20 +2,23 @@ class Particle {
     constructor() {
         this.x = random(160, 240)
         this.y = height - 100
+        this.tipo = random(["left", "right", "up"])
+        this.vida = random(1000)
     }
     show() {
         let probabilidadFlor = random(1)
-        if (probabilidadFlor < 0.05){
-            stroke (255, 0, 0)
-            strokeWeight(2)
-            ellipse(this.x, this.y, 1, 1)
+        if (this.vida > 0){        
+            if (probabilidadFlor < 0.05){
+                stroke (255, 0, 0)
+                strokeWeight(2)
+                ellipse(this.x, this.y, 1, 1)
+            }
+            else{
+                stroke(0, random(100, 255), 0)
+                strokeWeight(2)
+                point(this.x, this.y)
+            } 
         }
-        else{
-            stroke(0, random(100, 255), 0)
-            strokeWeight(2)
-            point(this.x, this.y)
-        }
-        
     }
     up() {
         this.y--
@@ -32,12 +35,28 @@ class Particle {
     randomWalk() {
         const direcciones = ["up", "right", "left"]
         const direccion = random(direcciones)
-        //console.log(direccion)
-        if (direccion === "up") this.up()
-        if (direccion === "down") this.down()
-        if (direccion === "left") this.left()
-        if (direccion === "right") this.right()
-    }
+        if (this.vida > 0){        
+            if (direccion === "up") this.up()
+            if (direccion === "down") this.down()
+            if (direccion === "left") {
+                if (this.tipo === "left"){
+                    for (let i = 0; i < 2; i++){ 
+                        this.left()
+                    }
+                }
+                else this.left()
+            }
+            if (direccion === "right") {
+                if (this.tipo === "right") {
+                    for (let i = 0; i < 2; i++){ 
+                        this.right()
+                    }
+                }
+                else this.right()
+            }
+            this.vida--
+        }
+    }    
 }
 
 let particulas = []
@@ -53,9 +72,10 @@ function preload() {
 
 function setup() {
     createCanvas(400, 400);
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 20; i++) {
         particulas.push(new Particle())
-    } background(imgFondo)
+    } 
+    background(imgFondo)
     anchoImagen = imgTiesto.width * 0.1
     altoImagen = imgTiesto.height * 0.1
     image(imgTiesto, (width - anchoImagen) / 2, height - altoImagen + 15, anchoImagen, altoImagen)
@@ -66,15 +86,4 @@ function draw() {
         particula.show()
         particula.randomWalk()
     }
-}
-
-function polygon(x, y, radius, npoints) {
-    let angle = TWO_PI / npoints;
-    beginShape();
-    for (let a = 0; a < TWO_PI; a += angle) {
-      let sx = x + cos(a) * radius;
-      let sy = y + sin(a) * radius;
-      vertex(sx, sy);
-    }
-    endShape(CLOSE);
 }

@@ -269,3 +269,29 @@ Examen Tema 1, 2 y 3
 - En Linux tenemos herramientas como Gparted o partitionmanager.
 
 - Desfragmentación de discos y como funcionan los discos internamente.
+
+# Administración de dominios
+
+2 tipos:
+    - Red local: Servidor fisico tuyo que gestiona la red.
+    - Web: Pagas un servicio.
+
+## Estructura Cliente-Servidor
+
+Peticiones-respuesta. El cliente le manda una request al servidor y este de forma remota le manda una respuesta. 
+
+## Protocolo LDAP
+
+Se considera como una base de datos pensada para almacenar directorios.
+Se utiliza para acreditar los usuarios, busca datos, permite centralizar la cuentas de usuarios y permisos y posibilita la replicacion de una base de datos.
+
+## Concepto de dominio. Subdominios. Requisitos para un dominio
+
+Cuando creas una página web, el nombre de dominio se establece para que nos acordemos facilmente de donde queremos acceder, en vez de ser números. Lo gestiona LCANN. Recomendable comprar .com, .es, .org y .net mínimo. Esto se hace para difereciar de donde es el dominio, siendo com global, es de region, org de organizaciones sin animo de lucro y net se iba a usar para tecnologicas pero se acabó usando para todo.
+
+Los subdominios sirven para crear ciertas categorias o partes dentro de una misma pagina web. EJEMPLO: ndt.com y ndt/aulavirtual.com
+
+Para hacerlo en interner, puedes buscar un host, que te proporcione el servidor y buscar un dominio.
+
+## Conceptos clave de active directory
+

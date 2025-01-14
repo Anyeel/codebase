@@ -3,7 +3,7 @@ class Particle {
         this.x = random(160, 240)
         this.y = height - 100
         this.tipo = random(["left", "right", "up"])
-        this.vida = random(1000)
+        this.vida = random(700)
     }
     show() {
         let probabilidadFlor = random(1)

@@ -291,7 +291,26 @@ Cuando creas una página web, el nombre de dominio se establece para que nos aco
 
 Los subdominios sirven para crear ciertas categorias o partes dentro de una misma pagina web. EJEMPLO: ndt.com y ndt/aulavirtual.com
 
-Para hacerlo en interner, puedes buscar un host, que te proporcione el servidor y buscar un dominio.
+Para hacerlo en internet, puedes buscar un host, que te proporcione el servidor y buscar un dominio.
 
 ## Conceptos clave de active directory
 
+ - Objeto: componentes que conforman el directorio, ej: usuarios, grupos, impresoras...
+ - Directorios: repositorio es donde se guarda la información referente a usuarios, grupos, recursos...
+ - Dominio: conjunto de obketos dentro del directorio. Dentro de un "bosque" puede haber varios dominios. Cada uno de ellos puede tener su propio conuunto de objetos y unidades organizativas.
+ - Controlador de dominio: conjunto de objetos del directorio para un det. dominio.
+ - Árboles: conjuntos de dominios que poseen una raíz común (Universidad de Granada)
+ - Bosque: abarca todos los dominios dentro de su ámbito (universidades de España)
+ - Unidad organizativa: contenedores de objetos que permiten organizarlos jerárquicamente en subgrupos dentro del dominio
+ - Relaciones de confianza: método de comunicación entre dominios, los usuarios de un determinado dominio, pueden autenticarse en otro dominio del directorio.
+    - Unidireccional
+    - Bidireccional
+    - Transitiva
+- Delegación de control entre dominios: permite que usuarios de un dominio puedan administrar recursos en otro dominio.
+
+## Administración de cuentas. Cuentas predeterminadas.
+
+En Windows server:
+    - Administrador
+    - Invitado
+    - Asistente de ayuda

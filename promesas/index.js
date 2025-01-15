@@ -1,4 +1,4 @@
-fetch('https://dummyjson.com/recipes/1')
+fetch('https://dummyjson.com/recipes/2')
 .then(res => res.json())
 .then(data => {
     const name = data.name

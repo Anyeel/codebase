@@ -3,13 +3,13 @@ fetch('https://dummyjson.com/quotes/random')
 .then(data => {
 
     //quote
-    create("p", data.quote, "body")
+    create("h1", data.quote, "body")
 
     //author of quote
     const author = data.author
-    const h1 = document.createElement("h1")
-    h1.innerText = author
-    document.body.appendChild(h1)
+    const p = document.createElement("p")
+    p.innerText = author
+    document.body.appendChild(p)
 
 });
 

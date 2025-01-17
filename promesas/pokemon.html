@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+</head>
+<body>
+    <script>
+        /*
+        const promesaFetch = fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
+        const promesaJSON = promesaFetch.then(data => data.json())
+        promesaJSON.then(pokemon => console.log(pokemon))
+        */
+
+        fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
+    .then(data => data.json())
+    .then(pokemons => {
+        console.log(pokemons)
+        for (let i = 0; i < pokemons.results.length; i++) { 
+            const p = document.createElement("p")
+            const img = document.createElement("img")
+            const pokemonUrl = pokemons.results[i].url
+
+            fetch(pokemonUrl)
+                .then(data => data.json())
+                .then(pokemonDetails => {
+                    p.innerText = pokemonDetails.name
+                    img.src = pokemonDetails.sprites.front_default
+                    document.body.appendChild(img)
+                    document.body.appendChild(p)
+                });
+        }
+    });
+
+    </script>
+</body>
+</html>

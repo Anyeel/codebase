@@ -314,3 +314,31 @@ En Windows server:
     - Administrador
     - Invitado
     - Asistente de ayuda
+
+## Contraseñas. Bloqueos de cuenta. Cuentas de usuarios y equipos.
+
+Imprescindible, ultimamente se encuentran practicas de seguridad en las que nos piden requerimientos como un minimo de 8 caracteres, símbolos, números... 
+
+Si varios usuarios usan la misma cuenta se compromete la seguridad, pero es una practica común en el entorno empresarial. Es mejor tener una cuenta personalizada para evitar problemas de creacion de cuentas si se cambian los puestos de trabajo...
+
+## Perfiles móviles y obligatorios
+
+Perfil móvil -> un usuario tenga siempre acceso a su perfil, independientemente del equipo.
+
+## Carpetas personales
+
+En nuestro perfil podemos crear carpetas particulares para cada usuario. Los directorios se pueden configurar con permisos, ejemplo: 2 personas del mismo departamento tienen unidad de red compartida para trabajar en conjunto.
+
+## Plantillas de usuario. Variables de entorno.
+
+Si tenemos muchos puestos del mismo usuario, en vez de crearlos cada vez podemos usar una plantilla para la creación de este usuario, que tendrá las caracteristicas que nosotros le digamos. Esto se hace con las variables de entorno y pueden modificarse a posteriori.
+
+## Administración de grupos. Tipo. Estrategias de anidamiento. Grupos predeterminados.
+
+Si tenemos muchos usuarios y departamentos habrá que hacer una planificación con árbol. Así facilitaremos la organización de quien tiene acceso a que cosas. Organigramas.
+
+- Ámbitos
+    - Universal
+    - Global
+    - Local
+

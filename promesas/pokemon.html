@@ -6,29 +6,33 @@
     <title>Pokemon</title>
 </head>
 <body>
+    <ul></ul>
     <script>
         /*
         const promesaFetch = fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
         const promesaJSON = promesaFetch.then(data => data.json())
         promesaJSON.then(pokemon => console.log(pokemon))
-        */
-
-        fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
+        otra forma de hacerlo ^ */
+    const ul = document.querySelector("ul")
+    fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
     .then(data => data.json())
     .then(pokemons => {
-        console.log(pokemons)
+        //console.log(pokemons)
+        //console.log(Object.keys(pokemons))
         for (let i = 0; i < pokemons.results.length; i++) { 
-            const p = document.createElement("p")
+            const li = document.createElement("li")
             const img = document.createElement("img")
             const pokemonUrl = pokemons.results[i].url
 
             fetch(pokemonUrl)
                 .then(data => data.json())
                 .then(pokemonDetails => {
-                    p.innerText = pokemonDetails.name
+                    li.innerText = pokemonDetails.name
                     img.src = pokemonDetails.sprites.front_default
-                    document.body.appendChild(img)
-                    document.body.appendChild(p)
+                    ul.appendChild(img)
+                    ul.appendChild(li)
+                    //document.body.appendChild(img)
+                    //document.body.appendChild(li)
                 });
         }
     });

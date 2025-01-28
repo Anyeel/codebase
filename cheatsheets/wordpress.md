@@ -33,3 +33,6 @@ Empresas que proporcionan espacio de servidor -> Alojamiento web (Hosting)
     - Housing
     - Cloud hosting
 
+### Gestor de contenidos
+
+Antes de los CMS era imposible mantener una pag web si no era con un equipo especializado. Importante poner las plantillas adaptativas. IMportante para el SEO el tema de las resoluciones. 

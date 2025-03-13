@@ -1,6 +1,5 @@
 import sqlite3
 
-# Conexión y creación del cursor
 conn = sqlite3.connect('eeg.db')
 c = conn.cursor()
 
@@ -12,13 +11,8 @@ def create_tables():
 
 # Agregar un paciente
 def agregar_paciente(nombre, edad):
-    c.execute('''
-        INSERT INTO Pacientes (nombre, edad)
-        VALUES (?, ?)
-    ''', (nombre, edad))
-    paciente_id = c.lastrowid
+    c.execute("INSERT INTO Pacientes (nombre, edad) VALUES (?, ?)", (nombre, edad))
     conn.commit()
-    return paciente_id
 
 # Agregar una medición
 def agregar_medicion(paciente_id, delta, theta, alpha, beta, gamma, amplitud, notas):
@@ -63,7 +57,7 @@ def mostrar_mediciones(paciente_id):
         linea = f"{medicion[0]} | {medicion[1]} | {medicion[2]} | {medicion[3]} | {medicion[4]} | {medicion[5]} | {medicion[6]} | {medicion[7]} | {medicion[8]} | {medicion[9]}"
         print(linea)
 
-# Inicializar la base de datos
+# Inicializar la base de datos si no está creada
 create_tables()
 
 # Ejemplo de uso del menú interactivo

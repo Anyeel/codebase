@@ -18,6 +18,7 @@ CREATE TABLE IF NOT EXISTS MedicionesEEG (
     FOREIGN KEY (paciente_id) REFERENCES Pacientes(id)
 );
 
+/* 
 -- Insertar pacientes
 INSERT INTO Pacientes (nombre, edad) VALUES ('Juan Perez', 39);
 INSERT INTO Pacientes (nombre, edad) VALUES ('Maria Garcia', 45);
@@ -41,3 +42,4 @@ INSERT INTO MedicionesEEG (paciente_id, delta, theta, alpha, beta, gamma, amplit
 INSERT INTO MedicionesEEG (paciente_id, delta, theta, alpha, beta, gamma, amplitud, notas_adicionales) VALUES (8, 1.5, 3.6, 9.7, 12.8, 43.9, 75.5, 'Estímulo visual');
 INSERT INTO MedicionesEEG (paciente_id, delta, theta, alpha, beta, gamma, amplitud, notas_adicionales) VALUES (9, 0.7, 4.8, 6.9, 18.0, 50.0, 85.5, 'Paciente dormido');
 INSERT INTO MedicionesEEG (paciente_id, delta, theta, alpha, beta, gamma, amplitud, notas_adicionales) VALUES (10, 2.2, 5.5, 8.8, 20.0, 65.0, 95.0, 'Estímulo auditivo');
+*/

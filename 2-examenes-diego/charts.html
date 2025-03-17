@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charts</title>
+</head>
+<body>
+    <section id="mediciones"></section>
+    <script>
+        let datos = [
+            {tiempo: 0, valor: 12},
+            {tiempo: 1, valor: 15},
+            {tiempo: 2, valor: 18},
+            {tiempo: 3, valor: 20},
+            {tiempo: 4, valor: 22},
+            {tiempo: 5, valor: 25},
+            {tiempo: 6, valor: 18},
+            {tiempo: 7, valor: 10},
+            {tiempo: 8, valor: 15},
+            {tiempo: 9, valor: 20},    
+        ]
+
+        const mediciones = document.getElementById('mediciones');
+
+        for (let i = 0; i < datos.length; i++) {
+            console.log(datos[i].tiempo, datos[i].valor);
+
+        }
+        datos.forEach(dato => {
+            console.log(dato.tiempo, dato.valor);
+            const h2 = document.createElement('h2');
+            const p = document.createElement('p');
+            h2.innerText = `Tiempo: ${dato.tiempo}`;
+            p.innerText = `Valor: ${dato.valor}`;
+            mediciones.appendChild(h2);
+            mediciones.appendChild(p);
+        });
+    </script>
+</body>
+</html>

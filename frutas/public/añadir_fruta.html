@@ -6,14 +6,19 @@
     <title>Añadir fruta</title>
 </head>
 <body>
-    <form>
+    <form id="formulario-frutas">
         <label for="fruta">Fruta: </label>
         <input type="text" id="fruta" name="fruta" required>
+
         <button type="submit">Enviar</button>
     </form>
-
+    <ul id="lista-frutas"></ul>
     <script>
-        const formulario = document.querySelector('form');
+        const formulario = document.querySelector('#formulario-frutas');
+        const listaFrutas = document.querySelector('#lista-frutas');
+
+        obtenerFrutas();
+
         formulario.addEventListener('submit', () => {
             event.preventDefault();
             const fruta = document.querySelector('#fruta').value;
@@ -24,14 +29,38 @@
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({fruta})
-            }
+            };
             fetch("/frutas", opciones)
-                .then(respuesta => respuesta.json())
-                .then(data => {
-                    console.log(data);
-                    alert(data)
-                })
-        })
+            .then(respuesta => respuesta.json())
+            .then(frutas => {
+                obtenerFrutas();
+            });
+
+        });
+
+        function obtenerFrutas() {
+            listaFrutas.innerHTML = "";
+            fetch("/frutas")
+            .then(respuesta => respuesta.json())
+            .then(frutas => {
+                frutas.forEach(fruta => {
+                    const li = document.createElement("li");
+                    li.innerText = frutasDiccionario[fruta] || fruta;
+                    listaFrutas.appendChild(li);
+                });
+            });
+        }
+
+        const frutasDiccionario = {
+            uva: "🍇",
+            manzana: "🍎",
+            platano: "🍌",
+            pera: "🍐",
+            melocotón: "🍑"
+        };
+            
+        // array por base de datos + volver al parking y poder cambiar 
+        // el estado de disponibilidad con formulario segun id de plaza
     </script>
 </body>
 </html>

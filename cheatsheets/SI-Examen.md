@@ -317,7 +317,7 @@ En Windows server:
 
 ## Contraseñas. Bloqueos de cuenta. Cuentas de usuarios y equipos.
 
-Imprescindible, ultimamente se encuentran practicas de seguridad en las que nos piden requerimientos como un minimo de 8 caracteres, símbolos, números... 
+Imprescindible, ultimamente se encuentran practicas de seguridad en las que nos piden requerimientos como un minimo de 8 caracteres, símbolos, números... También debemos de poner cierto número de intentos.
 
 Si varios usuarios usan la misma cuenta se compromete la seguridad, pero es una practica común en el entorno empresarial. Es mejor tener una cuenta personalizada para evitar problemas de creacion de cuentas si se cambian los puestos de trabajo...
 

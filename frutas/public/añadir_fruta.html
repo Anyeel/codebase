@@ -45,7 +45,7 @@
             .then(frutas => {
                 frutas.forEach(fruta => {
                     const li = document.createElement("li");
-                    li.innerText = frutasDiccionario[fruta] || fruta;
+                    li.innerText = frutasDiccionario[fruta.fruit_name] || fruta.fruit_name;
                     listaFrutas.appendChild(li);
                 });
             });
@@ -59,8 +59,7 @@
             melocotón: "🍑"
         };
             
-        // array por base de datos + volver al parking y poder cambiar 
-        // el estado de disponibilidad con formulario segun id de plaza
+        // parking y poder cambiar el estado de disponibilidad con formulario segun id de plaza
     </script>
 </body>
 </html>

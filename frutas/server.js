@@ -18,27 +18,37 @@ const frutasdb = new sqlite3.Database('fruit-database.db', (err) => {
   }
 });
 
-app.get("/frutas", (req, res) => {
-  
-  const consulta = `SELECT * FROM ${table}`
-  
-  frutasdb.all(consulta, [], (err, rows) => {
-    if (err) {
-        console.error('Error al consultar la tabla:', err.message);
-        res.status(500).json({ error: 'Error al obtener los datos de la tabla' });
-    } else {
-        console.log('Datos de la tabla frutas:', rows);
-        res.json(rows);
-    }
-  });
-
-});
 
 app.post("/frutas", (req, res) => {
-    const fruta = req.body.fruta;
-    console.log("Esto ha llegado desde el cliente:", fruta);
-    //frutas.push(fruta);
-    res.json(frutas);
+  const fruta = req.body.fruta;
+  console.log("Esto ha llegado desde el cliente:", fruta);
+
+  const consulta = `INSERT INTO ${table} (fruit_name) VALUES (?)`;
+
+  frutasdb.run(consulta, [fruta], function (err) {
+      if (err) {
+          console.error('Error al insertar en la tabla:', err.message);
+          res.status(500).json({ error: 'Error al insertar en la base de datos' });
+      } else {
+          console.log('Fruta insertada con éxito, ID:', this.lastID);
+          res.json({ id: this.lastID, fruit_name: fruta });
+      }
+  });
 });
+
+app.get("/frutas", (req, res) => {
+  const consulta = `SELECT id, fruit_name FROM ${table}`;
+
+  frutasdb.all(consulta, [], (err, rows) => {
+      if (err) {
+          console.error('Error al consultar la tabla:', err.message);
+          res.status(500).json({ error: 'Error al obtener los datos de la tabla' });
+      } else {
+          console.log('Datos de la tabla frutas:', rows);
+          res.json(rows);
+      }
+  });
+});
+
 
 app.listen(port, () => console.log('Servidor funcionando en el puerto ' + port));

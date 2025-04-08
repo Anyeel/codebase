@@ -13,3 +13,5 @@ Creación de un blog con consejos sobre el tema, tendencias o noticias. Según e
 URLS -> Eliminar articulos y espaciar por "-" ejemplo: /evitar-golpes-calor
 
 Uso de meta descripción para el texto previo a la página.
+
+La estructura de la página es importante, H1, H2, p...

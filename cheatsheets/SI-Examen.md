@@ -314,6 +314,7 @@ En Windows server:
     - Administrador
     - Invitado
     - Asistente de ayuda
+Ctrl + Win + Q -> para asistente
 
 ## Contraseñas. Bloqueos de cuenta. Cuentas de usuarios y equipos.
 
@@ -324,10 +325,13 @@ Si varios usuarios usan la misma cuenta se compromete la seguridad, pero es una 
 ## Perfiles móviles y obligatorios
 
 Perfil móvil -> un usuario tenga siempre acceso a su perfil, independientemente del equipo.
+Perfil obligatiorio.
 
 ## Carpetas personales
 
 En nuestro perfil podemos crear carpetas particulares para cada usuario. Los directorios se pueden configurar con permisos, ejemplo: 2 personas del mismo departamento tienen unidad de red compartida para trabajar en conjunto.
+
+Podemos crear papeleras de reciclaje ocultas para evitar perdidas de datos no deseadas.
 
 ## Plantillas de usuario. Variables de entorno.
 

@@ -337,12 +337,26 @@ Podemos crear papeleras de reciclaje ocultas para evitar perdidas de datos no de
 
 Si tenemos muchos puestos del mismo usuario, en vez de crearlos cada vez podemos usar una plantilla para la creación de este usuario, que tendrá las caracteristicas que nosotros le digamos. Esto se hace con las variables de entorno y pueden modificarse a posteriori.
 
+Directorios principales %APPDATA%, %WINDIR%. Pueden cambiarlos dependiendo del tamaño de la empresa y del control que quieran llevar sobre dichos directorios.
+
 ## Administración de grupos. Tipo. Estrategias de anidamiento. Grupos predeterminados.
 
 Si tenemos muchos usuarios y departamentos habrá que hacer una planificación con árbol. Así facilitaremos la organización de quien tiene acceso a que cosas. Organigramas.
+
+Grupos:
+    - Grupos de distribuición.
+    - Grupo de seguridad.
 
 - Ámbitos
     - Universal
     - Global
     - Local
+
+Cuando empezamos de 0 hacemos una estrategia visual dependiendo de los departamentos que haya en la empresa. Una vez definida la estrategia.
+
+Se pueden dar acceso remotamente por si se da una situación fuera de lo común.
+
+## Instalació win server y ubuntu server
+
+Guía en el temario.
 

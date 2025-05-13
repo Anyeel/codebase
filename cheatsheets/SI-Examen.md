@@ -360,3 +360,60 @@ Se pueden dar acceso remotamente por si se da una situación fuera de lo común.
 
 Guía en el temario.
 
+# Resolución de incidencias y asistencia técnica
+
+La documentación técnica hoy en día es vital. Veremos como elaborarla.
+Es recomendable tener un diario de resoluciones a probleams que hayan surgido.
+
+## Interpretación, análisis y elaboración de documentación técnica y manuales de instalación.
+
+En un manual debemos poner un contexto de primeras, es importante poner imagenes para que sea mas claro y rápido de aprender. 
+
+- Guía referencia rápida: Esquema que recopila caracteristicas y funciones imprescindibles.
+- Adecuación al nivel de los destinatarios: Que sea personalizado para usuarios, capaces de entenderlo dependiendo de su nivel.
+- Características específicas del paquete de software. Debe estar orientado a distintas versiones, dependiendo de las actualizaciones que se hayan hecho.
+  
+Destacar cuando el software pueda tener partes de pago, hay que detallar esas funciones para las que hay que pagar.
+
+- Capturas de pantalla. Importantes para tener un ejemplo visual de como debemos llevar a cabo los pasos de la guía o para gestionar errores.
+
+También podemos incluir una guía de errores comunes, un glosario por si utilizamos terminos con los que el usuario puede no estar familiarizado. 
+
+## Instalación y configuración de sistemas operativos y aplicaciones. Licencias de cliente y servidor.
+
+Debemos asegurarnos de que cada usuario tenga acceso unicamente al software que necesita. Para quitar apliaciones podemos acceder al centro de software de linux o windows. Los .exe ejecutan los asistentes de instalación. Las instalaciones se pueden personalizar en muchos casos, dependiendo de lo que necesite el usuario.
+
+- Arranque desde disco de instalación
+
+BIOS // UEFIBIOS, según la placa base del ordenador cambia. Podremos hacer guías ya que el acceso a la BIOS no es común para los usuarios que no estan experimentados. 
+
+Existe la opción de la instalación desantendida, la cual tiene la personalización ya fijada, que nos permitirá facilitar el proceso de instalación tanto de sistema operativo como de otro tipo de programas.
+
+## Instalaciones desatendidas e implementación de archivos de respuesta
+
+Las instalaciones desatendidas automatizan la instalación de sistemas operativos o aplicaciones mediante un archivo de respuesta preconfigurado (como unattend.xml en Windows). Este archivo contiene las configuraciones necesarias, como idioma, particiones y credenciales, eliminando la necesidad de intervención manual. Es ideal para entornos donde se requiere instalar el mismo sistema en múltiples equipos.
+
+Pasos básicos:
+
+Crear un archivo de respuesta con las configuraciones deseadas.
+Integrarlo en un medio de instalación (USB o disco).
+Ejecutar la instalación, que se completará automáticamente.
+
+La creación de una imagen de disco permite clonar un sistema operativo configurado con aplicaciones y ajustes. Esto asegura uniformidad en múltiples equipos.
+
+Pasos para la imagen:
+
+Configurar un equipo con el sistema operativo y software necesarios.
+Usar herramientas como Clonezilla o Sysprep para capturar la imagen.
+Almacenar la imagen para su despliegue en otros equipos.
+
+## Servidores de actualizaciones automáticas
+
+Todos los sistemas operativos tienen, lo cual nos permite mantener actualizado el sistema a la última version. Se podrán programar las actualizaciones para que se hagan automaticamente. Un ejemplo de este software sería Winows Server Update Services.
+
+## Partes de incidencias y protocolos de actuación
+
+Cada vez es más común que se creen tickets para las actuaciones que se realizan en el ambito laboral, para llevar un control claro de lo que se hace. Minimizar el impacto de la incidencia en ela actividad laboral, también previene futuras incidencias.
+
+- Incidencias conocidas: un fallo común que esta pasando a gran escala.
+- Incidencias descononocidas: nueva, no ha sucedido y hay que registrarla.

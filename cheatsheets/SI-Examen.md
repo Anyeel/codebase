@@ -417,3 +417,20 @@ Cada vez es más común que se creen tickets para las actuaciones que se realiza
 
 - Incidencias conocidas: un fallo común que esta pasando a gran escala.
 - Incidencias descononocidas: nueva, no ha sucedido y hay que registrarla.
+
+Clasificamos la incidencia
+Investigamos, posibles diagnosticos y soluciones
+Solucionamos la incidencia y reestablecemos el servicio
+Archivamos la incidencia a futuro
+
+Fecha y hora
+Equipo en el que se ha producido
+Software y hardware del equipo
+
+- Incidencias en aplicaciones (ya en desuso)
+
+## Administración remota
+
+La administración remota permite gestionar equipos a distancia, facilitando tareas como la configuración, resolución de problemas, instalación de software y monitoreo del sistema. Se realiza mediante herramientas como Remote Desktop, SSH o software especializado como TeamViewer o AnyDesk.
+
+UVNC -> Software para visualizar el escritorio de otro ordenador y trabajar con él. También hay funciones para servidores o incluso usarlo desde un movil, tablet... Normalmente se usa en Linux pero también se podría usar en windows.

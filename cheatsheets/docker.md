@@ -1,6 +1,6 @@
 # Comandos
 
-docker build -t "nombre" "ruta"     
+docker build -t "nombre-imagen" "ruta"     
 
 docker run -d --name "nombre" -p 3306:3306 "nombre-imagen"
 
@@ -10,7 +10,7 @@ docker-compose.yml
 
 docker compose up -d
 docker compose down
-docker ps -a
+docker ps -a -> (-a para ver todos)
 docker logs "id"
 
 docker exec -it "id" mysql -u root -p "contraseña"
@@ -23,6 +23,6 @@ Código -> Imagen -> Contenedores
 
 # Borrar imagen
 
-docker images
+docker images 
 docker rm -f "id" borrar contenedor -f -> forzar
 docker rmi -f "id" borrar imagen

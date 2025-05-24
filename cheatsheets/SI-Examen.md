@@ -360,6 +360,116 @@ Se pueden dar acceso remotamente por si se da una situación fuera de lo común.
 
 Guía en el temario.
 
+# Administración del acceso al dominio
+
+Nos centraremos en la gestión centralizada de servidores, clientes y recursos en diferentes organizaciones. Los administradores de dominio tienen derechos administrativos completos sobre la base de datos del directorio y cada miembro del dominio.
+
+## Equipos de Dominio
+
+### Categorías principales:
+
+- **Equipos y recursos físicos**: Hardware como ordenadores, impresoras, escáneres, monitores
+- **Recursos lógicos**: Elementos administrados por el dominio (directorios compartidos)
+- **Usuarios y grupos**: Personas gestionadas a través del dominio
+- **Servicios**: Correo electrónico, acceso FTP, etc.
+
+En un dominio, cada elemento se representa como una entidad individual con atributos asignables, formando el esquema de dominio.
+
+## Permisos y Derechos
+
+### Derechos
+- Atributos asignados a usuarios y grupos para acceder al sistema
+- Controlan características particulares de cada acceso
+- Incluyen acciones básicas como inicio de sesión, copias de seguridad
+- En Active Directory aparecen como "Derecho de usuario" o "User right"
+
+### Permisos
+- Definen cómo se puede acceder a recursos específicos
+- Dependen del usuario o grupo al que pertenezca
+- Establecen niveles de acceso: lectura, modificación, ejecución, eliminación
+- Cada usuario/grupo tiene permisos específicos para cada recurso
+
+## Herramientas de Administración
+
+### Samba
+- Programa de libre implementación para sistemas Unix/Linux
+- Permite que equipos Linux actúen como servidores para clientes Windows
+- Ofrece administración completa de servicios de archivos e impresión
+- Soporta listas de control de acceso
+- Gestión de usuarios mediante comando `smbpasswd`
+- Incluye SWAT (Samba Web Administration Tool) para configuración gráfica
+
+### NFS (Network File System)
+- Protocolo para sistemas de archivos de red
+- Estructura cliente-servidor
+- Permite acceso transparente a archivos remotos
+- Los archivos remotos se perciben como locales para el usuario
+
+## Permisos de Red y Locales
+
+### Características principales:
+- Los equipos pueden compartir recursos tanto desde servidor como desde clientes
+- Se pueden definir permisos localmente en estaciones de trabajo
+- **Permisos efectivos**: Solo usuarios que cumplan requisitos del servidor Y del cliente local tendrán acceso
+- **Herencia de permisos**: Los permisos se propagan desde elementos principales a secundarios
+
+### Configuración de permisos efectivos:
+- **Grupo general**: Permisos por pertenencia a grupo general
+- **Grupo local**: Permisos por pertenencia a grupo local
+- Acceso puede denegarse mediante permisos de recurso compartido
+
+### Gestión de herencia:
+- **Cambios en elemento principal**: Modificaciones se heredan automáticamente
+- **Configuración directa**: Elegir "Permitir" o "Denegar" para reemplazar herencia
+- **Eliminar herencia**: Desactivar casilla "Heredar del objeto principal"
+
+## Delegación de Permisos
+
+- Mecanismo para conceder permisos específicos a usuarios o grupos
+- **Delegación por pertenencia al grupo**: Método más habitual
+- Configurable a través de herramientas como GPMC (Group Policy Management Console)
+- Los administradores tienen permisos previos, usuarios reciben solo los necesarios
+
+## Listas de Control de Acceso (ACL)
+
+### Funcionalidades:
+- Asignan permisos de forma habitual
+- Filtran tráfico para seguridad informática
+- Mejoran rendimiento limitando tráfico específico
+- Controlan acceso por áreas de empresa
+- Bloquean redes sociales, permiten correo electrónico
+
+### Permisos básicos en Linux:
+- **Lectura ("r")**
+- **Escritura ("w")**
+- **Ejecución ("x")**
+
+### Estructura en Linux:
+- **Owner**: Propietario del archivo
+- **Group**: Grupo del propietario
+- **Other**: Resto de usuarios
+- **Usuarios específicos**: Acceso individualizado
+- **Grupos específicos**: Listado de grupos con acceso
+
+### Requisitos para ACL en Linux:
+- Soporte del kernel
+- Sistema de archivos montado con atributo ACL
+
+## Directivas de Grupo
+
+### Características:
+- Específicas de Windows Server
+- Definen reglas aplicadas a cuentas de usuario y equipo
+- Simplifican Active Directory
+- Controlan derechos de usuarios y amplían seguridad
+- Más frecuentes en redes modestas
+- No requieren necesariamente Active Directory
+
+### Plantillas:
+- Permiten compendiar características para aplicación en bloque
+- Facilitan la gestión al agrupar configuraciones comunes
+- Se pueden crear y editar desde las herramientas de directivas de grupo
+
 # Resolución de incidencias y asistencia técnica
 
 La documentación técnica hoy en día es vital. Veremos como elaborarla.

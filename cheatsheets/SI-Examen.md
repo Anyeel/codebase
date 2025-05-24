@@ -378,21 +378,17 @@ En un dominio, cada elemento se representa como una entidad individual con atrib
 ## Permisos y Derechos
 
 ### Derechos
-- Atributos asignados a usuarios y grupos para acceder al sistema
-- Controlan características particulares de cada acceso
-- Incluyen acciones básicas como inicio de sesión, copias de seguridad
-- En Active Directory aparecen como "Derecho de usuario" o "User right"
+
+Atributos asignados a usuarios y grupos para acceder al sistema, controlan características particulares de cada acceso. Incluyen acciones básicas como inicio de sesión, copias de seguridad. En Active Directory aparecen como "Derecho de usuario"
 
 ### Permisos
-- Definen cómo se puede acceder a recursos específicos
-- Dependen del usuario o grupo al que pertenezca
-- Establecen niveles de acceso: lectura, modificación, ejecución, eliminación
-- Cada usuario/grupo tiene permisos específicos para cada recurso
+
+Definen cómo se puede acceder a recursos específicos, dependen del usuario o grupo al que pertenezca. Establecen niveles de acceso: lectura, modificación, ejecución, eliminación. Cada usuario/grupo tiene permisos específicos para cada recurso.
 
 ## Herramientas de Administración
 
 ### Samba
-- Programa de libre implementación para sistemas Unix/Linux
+- Programa de libre implementación para sistemas Linux
 - Permite que equipos Linux actúen como servidores para clientes Windows
 - Ofrece administración completa de servicios de archivos e impresión
 - Soporta listas de control de acceso
@@ -473,7 +469,7 @@ En un dominio, cada elemento se representa como una entidad individual con atrib
 # Resolución de incidencias y asistencia técnica TEMA 6
 
 La documentación técnica hoy en día es vital. Veremos como elaborarla.
-Es recomendable tener un diario de resoluciones a probleams que hayan surgido.
+Es recomendable tener un diario de resoluciones a problemas que hayan surgido.
 
 ## Interpretación, análisis y elaboración de documentación técnica y manuales de instalación.
 
@@ -491,7 +487,7 @@ También podemos incluir una guía de errores comunes, un glosario por si utiliz
 
 ## Instalación y configuración de sistemas operativos y aplicaciones. Licencias de cliente y servidor.
 
-Debemos asegurarnos de que cada usuario tenga acceso unicamente al software que necesita. Para quitar apliaciones podemos acceder al centro de software de linux o windows. Los .exe ejecutan los asistentes de instalación. Las instalaciones se pueden personalizar en muchos casos, dependiendo de lo que necesite el usuario.
+Debemos asegurarnos de que cada usuario tenga acceso unicamente al software que necesita. Para quitar aplicaciones podemos acceder al centro de software de linux o windows. Los .exe ejecutan los asistentes de instalación. Las instalaciones se pueden personalizar en muchos casos, dependiendo de lo que necesite el usuario.
 
 - Arranque desde disco de instalación
 

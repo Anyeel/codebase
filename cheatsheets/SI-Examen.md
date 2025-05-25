@@ -344,8 +344,8 @@ Directorios principales %APPDATA%, %WINDIR%. Pueden cambiarlos dependiendo del t
 Si tenemos muchos usuarios y departamentos habrá que hacer una planificación con árbol. Así facilitaremos la organización de quien tiene acceso a que cosas. Organigramas.
 
 Grupos:
-    - Grupos de distribuición.
-    - Grupo de seguridad.
+    - Grupos de distribuición. Se usan para correo electrónico
+    - Grupo de seguridad. Se usan para asignar permisos en recursos de dominios
 
 - Ámbitos
     - Universal
@@ -515,7 +515,7 @@ Almacenar la imagen para su despliegue en otros equipos.
 
 ## Servidores de actualizaciones automáticas
 
-Todos los sistemas operativos tienen, lo cual nos permite mantener actualizado el sistema a la última version. Se podrán programar las actualizaciones para que se hagan automaticamente. Un ejemplo de este software sería Winows Server Update Services.
+Todos los sistemas operativos tienen, lo cual nos permite mantener actualizado el sistema a la última version. Se podrán programar las actualizaciones para que se hagan automaticamente. Un ejemplo de este software sería Windows Server Update Services.
 
 ## Partes de incidencias y protocolos de actuación
 
